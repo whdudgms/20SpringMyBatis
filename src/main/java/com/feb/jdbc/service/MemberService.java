@@ -44,9 +44,12 @@ public class MemberService {
 	}
 
 	public boolean findPasswd(HashMap<String,String> params) {
-		int result = memberDao.findMember(params.get("memberId"),params.get("email"));
-		System.out.println("result ="+result);
 		
+		System.out.println("memberId : : " + params.get("memberId"));
+		System.out.println("member : : " + params.get("email"));
+		int result = memberDao.findMember(params.get("memberId"),params.get("email"));
+		
+		System.out.println("result ="+result);
 		if(result ==1) {
 			// 랜덤한 문자열 생
 			String  uuid = UUID.randomUUID().toString();

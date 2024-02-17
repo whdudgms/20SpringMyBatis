@@ -71,6 +71,7 @@ public class MemberDaoImpl extends JdbcDaoSupport implements MemberDao {
 	@Override
 	public int findMember(String memberId, String email) {
 		String sql = "select count(1) from lecture.member where member_id = ? and email = ?";
+		@SuppressWarnings("deprecation")
 		int result = getJdbcTemplate().queryForObject(
 				sql, 
 				new Object[] {memberId,email},

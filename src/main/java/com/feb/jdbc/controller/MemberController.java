@@ -58,6 +58,7 @@ public class MemberController {
 	
 	@GetMapping("/findPw.do")
 	public ModelAndView findPw(@RequestParam HashMap<String,String> params) {
+		
 		ModelAndView mv = new ModelAndView();
 		boolean result = memberService.findPasswd(params);
 	
