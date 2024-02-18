@@ -1,4 +1,4 @@
-# 20_springJdbc
+# 20_SpringMybatis
 
 
 2/18 mybatis에 대한 정리 내용 
