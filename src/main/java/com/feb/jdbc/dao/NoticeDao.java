@@ -3,9 +3,13 @@ package com.feb.jdbc.dao;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.springframework.stereotype.Repository;
+
 import com.feb.jdbc.entity.Member;
 import com.feb.jdbc.entity.Notice;
 
+
+@Repository
 public interface NoticeDao {
 
 //	public HashMap<String, Object> findNotice(int noticeIdx);

@@ -30,8 +30,14 @@ public class LoginController {
 		HttpServletResponse response){
     	ModelAndView mv = new ModelAndView();
     	
-    	boolean result = loginService.login(params);
+    	boolean result = loginService.login(params);	
+ 
+   
+    	mv.setViewName("common/broker");
+
     	if(result) {
+    		mv.addObject("resultCode", result );
+    		mv.addObject("nextUri", "/list.do");
 			mv.addObject("resultMsg", "로그 성공");
 			mv.addObject("resultCode", "loginOk");
 
@@ -39,7 +45,8 @@ public class LoginController {
     	}else {
 
     		mv.addObject("resultMsg", "로그인실패");
-			mv.addObject("resultCode", "loginFail");
+    		mv.addObject("resultCode", result );
+    		mv.addObject("nextUri", "/loginPage.do");
 
     	}
 

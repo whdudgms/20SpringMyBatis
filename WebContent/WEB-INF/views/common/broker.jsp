@@ -12,14 +12,19 @@
 <script type="text/javascript">
 	//컨트롤러에서 보낸 메세지가 있을 경우
 	window.onload = function(e){ 
-		var resultMsg = '${resultMsg}';
+		var resultMsg ;
+		 resultMsg = '${resultMsg}';
 		var resultCode = '${resultCode}';
+		
 		if(resultMsg.length > 0){
-			alert(resultMsg);
+		window.alert(resultMsg);
+		}else{
+			window.alert('메세지없음.');
 		}
 		if(resultCode == 'ok'){
 			window.location.href = '<c:url value="{nextUri}"/>';
 		}
+		window.location.href = '<c:url value="{nextUri}"/>';
 	}
 </script>
 <body>

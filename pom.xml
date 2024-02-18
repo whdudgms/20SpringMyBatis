@@ -1,11 +1,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>14_SpringJdbc</groupId>
-  <artifactId>14_SpringJdbc</artifactId>
+  <groupId>20_SpringMyBatis</groupId>
+  <artifactId>20_SpringMyBatis</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <dependencies>
 	  <!-- https://mvnrepository.com/artifact/com.sun.mail/javax.mail -->
+	  
+	  <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+<dependency>
+    <groupId>org.mybatis</groupId>
+    <artifactId>mybatis</artifactId>
+    <version>3.5.15</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+<dependency>
+    <groupId>org.mybatis</groupId>
+    <artifactId>mybatis-spring</artifactId>
+    <version>2.1.2</version>
+</dependency>
 <dependency>
     <groupId>com.sun.mail</groupId>
     <artifactId>javax.mail</artifactId>
@@ -74,8 +88,8 @@
 	</dependency>
 
 	<dependency>
-		<groupId>11_SpringJdbc</groupId>
-		<artifactId>11_SpringJdbc</artifactId>
+		<groupId>20_SpringMyBatis</groupId>
+		<artifactId>20_SpringMyBatis</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</dependency>
   </dependencies>

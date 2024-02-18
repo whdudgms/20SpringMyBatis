@@ -18,12 +18,26 @@ import org.springframework.web.servlet.ModelAndView;
 import com.feb.jdbc.entity.Member;
 import com.feb.jdbc.service.MemberService;
 
+@RestController
 @Controller
 public class MemberController {
 	
 	@Autowired
 	private MemberService memberService;
-
+	
+	
+	
+	@RequestMapping("/deleteMember.do")
+	   public ModelAndView deleteMember(@RequestParam HashMap<String, String> params) {
+	      String memberId = params.get("memberId");
+	      ModelAndView mv = new ModelAndView();
+	      mv.setViewName("common/broker");
+	      mv.addObject("resultMsg", "삭제한 수 : " + memberService.deleteMember(memberId));
+	      mv.addObject("resultCode", "ok");
+	      mv.addObject("nextUri", "/loginPage.do");
+	      return mv;
+	   }
+	
 	@ResponseBody
 	@RequestMapping("/findMember.do")
 	public String findMember(@RequestParam HashMap<String, String> params) {
