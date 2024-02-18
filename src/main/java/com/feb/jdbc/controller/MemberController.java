@@ -32,7 +32,7 @@ public class MemberController {
 	      String memberId = params.get("memberId");
 	      ModelAndView mv = new ModelAndView();
 	      mv.setViewName("common/broker");
-	      mv.addObject("resultMsg", "삭제한 수 : " + memberService.deleteMember(memberId));
+	      mv.addObject("resultMsg", "삭제한 수 : " + memberService.deleteMember(params));
 	      mv.addObject("resultCode", "ok");
 	      mv.addObject("nextUri", "/loginPage.do");
 	      return mv;
